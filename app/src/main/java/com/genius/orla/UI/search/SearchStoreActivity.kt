@@ -43,7 +43,7 @@ class SearchStoreActivity : AppCompatActivity() {
 
     private fun setOnBtnClickListener() {
         //현재위치 조회 버튼 눌렀을 때 현재 위치를 요청 합니다.
-        button.setOnClickListener {
+        btn_search_store_act_reload.setOnClickListener {
             getPermission() // 퍼미션 검사
         }
     }

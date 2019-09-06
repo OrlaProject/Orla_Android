@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-<Button
-    android:id="@+id/button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="위치 얻어오기" />
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textColor="@color/colorAccent"
-        android:text="여기에 표시 될 거에요.."/>
-</LinearLayout>
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_reload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_search_store"
+        android:background="@color/pale_grey"
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:id="@+id/btn_search_store_act_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/reload" />
+
+            <TextView
+                style="@style/regularBlueStyle12sp"
+                android:text="현 위치 새로고침"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/regularLightishBlueStyle14sp"
+            android:text="내 위치 : 서울특별시 서초구 매헌로 24 NH디지털혁신캠퍼스"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_search_store_act"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_store_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include
+        android:id="@+id/toolbar_search_store"
+        layout="@layout/toolbar_search_store" />
+</RelativeLayout>
