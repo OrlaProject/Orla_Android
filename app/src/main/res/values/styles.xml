@@ -19,6 +19,16 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+
+    <style name="mediumCharcoalGrayStyle14sp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/charcoal_grey</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/noto_sans_cjkkr_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
     <style name="boldBlueStyle14sp">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,6 +49,15 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="regularLightishBlueStyle14sp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lightish_blue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/noto_sans_cjkkr_regular</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="regularPastelBlueStyle12sp">
         <item name="android:layout_width">wrap_content</item>

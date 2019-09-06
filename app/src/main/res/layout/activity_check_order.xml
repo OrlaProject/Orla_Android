@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pale_grey">
@@ -15,8 +14,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_check_order"
-        >
+        android:layout_below="@id/toolbar_check_order" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -145,16 +143,18 @@
 
                 <!-- 내 주문 재료 확인 -->
 
-                <!-- 주문 재료 이력 -->
-                <Button
+                <TextView
                     android:id="@+id/btn_check_order_check_material"
                     style="@style/mediumBlackStyle14sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center"
                     android:background="@drawable/white_round_border"
                     android:text="내 주문 재료 확인" />
 
+                <!-- 주문 재료 이력 -->
                 <LinearLayout
                     android:layout_marginTop="8dp"
                     android:paddingHorizontal="24dp"
@@ -170,7 +170,6 @@
                         android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
                         <TextView
                             style="@style/mediumBlackStyle14sp"
                             android:layout_width="wrap_content"
@@ -182,7 +181,8 @@
                             android:layout_alignParentRight="true"
                             android:background="@drawable/pastel_blue_round_border"
                             android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp"
+                            android:paddingVertical="2dp"
+                            android:gravity="center_vertical"
                             android:text="상세 이력 확인" />
                     </RelativeLayout>
 
@@ -274,16 +274,27 @@
                 </LinearLayout>
 
                 <!-- 가격 및 매장 -->
-                <LinearLayout
+                <RelativeLayout
+                    android:background="@drawable/blue_round_border"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
                     android:paddingHorizontal="24dp"
                     android:paddingVertical="11dp"
                     android:layout_marginHorizontal="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_check_order_act_quantity"
+                        style="@style/regularWhiteGrayStyle14sp"
+                        android:text="x1"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true" />
+
+                <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/blue_round_border">
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_marginTop="2dp"
@@ -350,7 +361,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
+                </RelativeLayout>
 
             </LinearLayout>
         </RelativeLayout>
