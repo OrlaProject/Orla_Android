@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="118dp">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_rv_menu_list_thumbnail"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:cropToPadding="false"
+        android:background="#d8d8d8">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <LinearLayout
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/iv_rv_menu_list_thumbnail"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_rv_menu_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#1e2527"
+            android:text="단호박 라떼"/>
+
+        <TextView
+            android:id="@+id/tv_rv_menu_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9b9b9b"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4sp"
+            android:text="피로회복, 신진대사 활성화로 활력에 탁월한 친환경 호박 주스"
+            />
+
+        <TextView
+            android:id="@+id/tv_rv_menu_list_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#1e2527"
+            android:layout_marginTop="3dp"
+            android:text="3,800원"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_rv_menu_list_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="19dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nodrug_icon"/>
+
+
+
+
+
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#f3f3f3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+
+</RelativeLayout>

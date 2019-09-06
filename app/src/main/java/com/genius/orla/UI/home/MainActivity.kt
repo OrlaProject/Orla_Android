@@ -1,4 +1,4 @@
-package com.genius.orla.home
+package com.genius.orla.UI.home
 
 import androidx.appcompat.app.AppCompatActivity
 

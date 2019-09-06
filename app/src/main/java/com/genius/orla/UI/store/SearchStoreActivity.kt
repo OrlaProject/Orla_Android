@@ -1,4 +1,4 @@
-package com.genius.orla.UI.search
+package com.genius.orla.UI.store
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -8,10 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
+import android.view.View
+import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.genius.orla.R
+import com.genius.orla.UI.store.adapter.SearchStoreAdapter
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.activity_search_store.*
@@ -39,6 +42,17 @@ class SearchStoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_store)
 
         setOnBtnClickListener()
+        setTabLayout()
+    }
+
+    private fun setTabLayout() {
+        vp_search_store_act.adapter = SearchStoreAdapter(supportFragmentManager, 2)
+        tl_search_store_act.setupWithViewPager(vp_search_store_act)
+        val toptab : View = this.layoutInflater.inflate(R.layout.tab_menu_search_store,null,false)
+
+        tl_search_store_act.getTabAt(0)!!.customView = toptab.findViewById(R.id.rl_tab_menu_search_store_nearby) as RelativeLayout
+        tl_search_store_act.getTabAt(1)!!.customView = toptab.findViewById(R.id.rl_tab_menu_search_store_star) as RelativeLayout
+
     }
 
     private fun setOnBtnClickListener() {
@@ -117,7 +131,7 @@ class SearchStoreActivity : AppCompatActivity() {
                 currentPosition = LatLng(location!!.latitude, location!!.longitude)
                 Log.d(TAG, "onLocationResult : ${location!!.latitude}, ${location!!.longitude}")
 
-                textView.text = getGeocode(currentPosition)
+                textView.text = "내 위치 : "+getGeocode(currentPosition)
             }
         }
     }
