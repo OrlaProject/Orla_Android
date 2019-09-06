@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:id="@+id/rl_tab_menu_category_drink"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">
@@ -21,7 +21,7 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rl_tab_menu_category_salad"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">
@@ -34,7 +34,7 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rl_tab_menu_category_sandwich"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">
@@ -47,7 +47,7 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rl_tab_menu_category_fruit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">
