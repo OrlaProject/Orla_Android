@@ -37,6 +37,8 @@
             android:src="@drawable/star_icon"/>
     </RelativeLayout>
     <ScrollView
+        android:layout_paddingTop="16dp"
+        android:layout_above="@+id/ll_fruit_detail_btn"
         android:layout_below="@+id/img_fruit_act_thumb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -99,47 +101,19 @@
             android:layout_marginTop="12dp">
 
             <TextView
+                android:id="@+id/txt_fruit_act_set_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="#1e2527"
                 android:fontFamily="@font/noto_sans_cjkkr_medium"
-                android:text="3,800원"/>
+                android:text="3800원"/>
 
 
             <RelativeLayout
                 android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true">
-
-                <ImageView
-                    android:id="@+id/btn_fruit_act_set_minus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/mino_icon"/>
-
-
-                <TextView
-                    android:id="@+id/txt_fruit_act_set_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="#1e2527"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="end"
-                    android:fontFamily="@font/noto_sans_cjkkr_medium"
-                    tools:text="1"/>
-
-                <ImageView
-                    android:id="@+id/btn_fruit_act_set_plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/plus_icon"/>
-
 
             </RelativeLayout>
 
@@ -375,6 +349,7 @@
 
     <!-- 주문 재료 이력 : 포도 -->
     <LinearLayout
+        android:id="@+id/grape"
         android:layout_below="@+id/view3"
         android:paddingBottom="16dp"
         android:orientation="vertical"
@@ -419,7 +394,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="51.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_category"
+                android:id="@+id/txt_fruit_act_grape_category"
                 android:layout_marginLeft="11.5dp"
                 android:text="포도"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -440,7 +415,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_class"
+                android:id="@+id/txt_fruit_act_grape_class"
                 android:layout_marginLeft="11.5dp"
                 android:text="무농약 농산물"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -462,7 +437,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_number"
+                android:id="@+id/txt_fruit_act_grape_number"
                 android:layout_marginLeft="11.5dp"
                 android:text="031300001"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -483,7 +458,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="38.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_producer"
+                android:id="@+id/txt_fruit_act_grape_producer"
                 android:layout_marginLeft="11.5dp"
                 android:text="호박"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -493,7 +468,8 @@
 
     <!-- 주문 재료 이력 : 사과 -->
     <LinearLayout
-        android:layout_below="@+id/view3"
+        android:id="@+id/apple"
+        android:layout_below="@+id/grape"
         android:paddingBottom="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -537,9 +513,9 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="51.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_category"
+                android:id="@+id/txt_fruit_detail_act_apple_category"
                 android:layout_marginLeft="11.5dp"
-                android:text="포도"
+                android:text="사과"
                 style="@style/regularCharcoalGrayStyle14sp"/>
         </LinearLayout>
 
@@ -558,7 +534,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_class"
+                android:id="@+id/txt_fruit_detail_act_apple_class"
                 android:layout_marginLeft="11.5dp"
                 android:text="무농약 농산물"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -580,7 +556,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_number"
+                android:id="@+id/txt_fruit_detail_act_apple_number"
                 android:layout_marginLeft="11.5dp"
                 android:text="031300001"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -601,9 +577,9 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="38.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_producer"
+                android:id="@+id/txt_fruit_detail_act_apple_producer"
                 android:layout_marginLeft="11.5dp"
-                android:text="호박"
+                android:text="김남길"
                 style="@style/regularCharcoalGrayStyle14sp"/>
         </LinearLayout>
 
@@ -611,7 +587,8 @@
 
     <!-- 주문 재료 이력 : 토마토 -->
     <LinearLayout
-        android:layout_below="@+id/view3"
+        android:id="@+id/tomato"
+        android:layout_below="@+id/apple"
         android:paddingBottom="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -655,9 +632,9 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="51.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_category"
+                android:id="@+id/txt_fruit_act_tomato_category"
                 android:layout_marginLeft="11.5dp"
-                android:text="포도"
+                android:text="토마토"
                 style="@style/regularCharcoalGrayStyle14sp"/>
         </LinearLayout>
 
@@ -676,7 +653,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_class"
+                android:id="@+id/txt_fruit_act_tomatot_class"
                 android:layout_marginLeft="11.5dp"
                 android:text="무농약 농산물"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -698,7 +675,7 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="25.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_number"
+                android:id="@+id/txt_fruit_act_tomato_number"
                 android:layout_marginLeft="11.5dp"
                 android:text="031300001"
                 style="@style/regularCharcoalGrayStyle14sp"/>
@@ -719,18 +696,28 @@
                 android:background="@color/charcoal_grey"
                 android:layout_marginLeft="38.5dp"/>
             <TextView
-                android:id="@+id/txt_check_order_act_producer"
+                android:id="@+id/txt_fruit_act_tomato_producer"
                 android:layout_marginLeft="11.5dp"
-                android:text="호박"
+                android:text="정남순"
                 style="@style/regularCharcoalGrayStyle14sp"/>
         </LinearLayout>
 
     </LinearLayout>
 
 
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@id/tomato"
+        android:background="@color/pale_grey"/>
+
+
 </RelativeLayout>
     </ScrollView>
     <LinearLayout
+        android:id="@+id/ll_fruit_detail_btn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
