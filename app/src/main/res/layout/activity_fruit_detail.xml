@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".UI.menu.MenuDetailActivity">
 
 
@@ -37,7 +38,6 @@
             android:src="@drawable/star_icon"/>
     </RelativeLayout>
     <ScrollView
-        android:layout_paddingTop="16dp"
         android:layout_above="@+id/ll_fruit_detail_btn"
         android:layout_below="@+id/img_fruit_act_thumb"
         android:layout_width="match_parent"
@@ -54,6 +54,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -70,16 +71,16 @@
                     style="regularCharcoalGrayStyle14sp"
                     android:textSize="18sp"
                     android:textColor="#1e2527"
-                    tools:text="단호박 라떼"/>
+                    android:text="과일 세트"/>
 
                 <TextView
-                    android:layout_width="224dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:textColor="#9b9b9b"
                     android:lineSpacingExtra="6sp"
                     android:layout_marginTop="1dp"
-                    tools:text="피로회복, 신진대사 활성화로 활력에 탁월한 친환경 호박주스"
+                    android:text="신선한 과일을 원하는 조합으로 담아보세요."
                     />
 
             </LinearLayout>
@@ -335,7 +336,7 @@
             android:layout_marginRight="24dp"
             style="@style/regularLightishBlueStyle14sp"
             android:textSize="16sp"
-            android:text="/10" />
+            android:text="/1000" />
     </LinearLayout>
 
     <View
@@ -374,7 +375,6 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/pastel_blue_round_border"
                 android:paddingHorizontal="8dp"
-                android:paddingVertical="2dp"
                 android:gravity="center_vertical"
                 android:text="상세 이력 확인" />
         </RelativeLayout>
@@ -493,7 +493,6 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/pastel_blue_round_border"
                 android:paddingHorizontal="8dp"
-                android:paddingVertical="2dp"
                 android:gravity="center_vertical"
                 android:text="상세 이력 확인" />
         </RelativeLayout>
@@ -612,7 +611,6 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/pastel_blue_round_border"
                 android:paddingHorizontal="8dp"
-                android:paddingVertical="2dp"
                 android:gravity="center_vertical"
                 android:text="상세 이력 확인" />
         </RelativeLayout>
