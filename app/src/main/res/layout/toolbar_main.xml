@@ -6,28 +6,25 @@
     android:layout_height="56dp">
 
     <ImageView
-        android:id="@+id/img_search_store_toolbar_back"
+        android:id="@+id/img_main_act_qr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/back_icon"
+        android:src="@drawable/qr_icon"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="14dp" />
-    <TextView
+    <ImageView
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:text="매장 찾기"
-        style="@style/regularCharcoalGrayStyle14sp"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textColor="@color/black" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/oola_icon"/>
 
     <ImageView
-        android:id="@+id/img_search_store_toolbar_map"
+        android:id="@+id/img_main_act_notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="14dp"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/map_icon" />
+        android:src="@drawable/alarm" />
 
 </LinearLayout>

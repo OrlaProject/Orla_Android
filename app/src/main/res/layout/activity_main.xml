@@ -1,10 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:orientation="vertical">
+
+        <!-- 뷰페이저 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="204dp">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_main_act_slider"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                tools:background="@drawable/banner" />
+        </RelativeLayout>
+
+        <!-- 고객 등급 카드 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="36dp"
+            android:background="@drawable/white_round_border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="13dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hello_icon"/>
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    style="@style/mediumCharcoalGrayStyle14sp"
+                    android:textSize="16sp"
+                    android:text="하승완님" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/noto_sans_cjkkr_medium"
+                    android:textStyle="normal"
+                    android:textColor="#ff8455"
+                    android:gravity="end"
+                    android:text="Super level" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#9b9b9b"
+                    android:layout_gravity="center_vertical"
+                    android:text="8잔만 더 마시면 음료 쿠폰!" />
+                <TextView
+                    android:text="2/10"
+                    style="@style/regularLightishBlueStyle14sp" />
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/progress_main"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:progress="20"
+                android:background="@color/pale_grey" />
+        </LinearLayout>
+
+        <!-- 쿠폰 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="36dp"
+            android:background="@drawable/white_round_border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coupon_icon"/>
+                <TextView
+                    android:layout_marginLeft="13dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    style="@style/mediumBlackStyle14sp"
+                    android:text="쿠폰" />
+                <TextView
+                    android:id="@+id/txt_main_act_coupon_count"
+                    android:text="2개"
+                    android:textSize="16sp"
+                    style="@style/mediumBlackStyle14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginBottom="-20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_main_act_orla_order"
+        android:src="@drawable/home_order_contents_icon" />
+
+    <Button
+        android:id="@+id/btn_main_act_orla_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_round_border"
+        android:text="올라 오더"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="24dp"
+        style="@style/regularWhiteGrayStyle14sp"
+        android:textSize="16sp"
+        android:fontFamily="@font/noto_sans_cjkkr_medium" />
 
     <include
-        layout="@layout/toolbar_main"
-
+        android:id="@+id/toolbar_main"
+        layout="@layout/toolbar_main" />
 </RelativeLayout>
