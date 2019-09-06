@@ -23,7 +23,7 @@ android {
 
 ext {
     GOOGLE_SERVICES_MAP = 'com.google.android.gms:play-services-maps:16.0.0'
-    GOOGLE_SERVICES_LOCATION =  'com.google.android.gms:play-services-location:16.0.0'
+    GOOGLE_SERVICES_LOCATION = 'com.google.android.gms:play-services-location:16.0.0'
 
     PROJECT_DEPENDENCIES = [
             GOOGLE_SERVICES_MAP,
