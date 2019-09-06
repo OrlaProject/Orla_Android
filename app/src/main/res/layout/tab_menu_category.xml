@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:dividerPadding="1dp">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_tab_menu_category_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:text="음료"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#484848"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_tab_menu_category_salad"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:text="샐러드"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#484848"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_tab_menu_category_sandwich"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:text="샌드위치"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#484848"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_tab_menu_category_fruit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:text="1인과일"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#484848"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
