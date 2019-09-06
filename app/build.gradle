@@ -20,7 +20,7 @@ android {
         }
     }
 }
-
+/*
 ext {
     GOOGLE_SERVICES_MAP = 'com.google.android.gms:play-services-maps:16.0.0'
     GOOGLE_SERVICES_LOCATION =  'com.google.android.gms:play-services-location:16.0.0'
@@ -29,7 +29,7 @@ ext {
             GOOGLE_SERVICES_MAP,
             GOOGLE_SERVICES_LOCATION
     ]
-}
+}*/
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -41,7 +41,8 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation PROJECT_DEPENDENCIES
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
 }
 repositories {
     mavenCentral()
