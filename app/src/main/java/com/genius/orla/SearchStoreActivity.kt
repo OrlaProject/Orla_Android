@@ -19,9 +19,9 @@ import java.util.*
 
 class SearchStoreActivity : AppCompatActivity() {
 
-    val TAG = "SearchStoreActivity"
+    private val TAG = "SearchStoreActivity"
 
-    var position: LatLng? = null
+    lateinit var currentPosition : LatLng
 
     lateinit var locationRequest: LocationRequest
     lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -41,38 +41,18 @@ class SearchStoreActivity : AppCompatActivity() {
     }
 
     private fun setOnBtnClickListener() {
-        //현재위치 조회 버튼 눌렀을 때 현재 위치 요청 합니다.
+        //현재위치 조회 버튼 눌렀을 때 현재 위치를 요청 합니다.
         button.setOnClickListener {
-            getPermission()
+            getPermission() // 퍼미션 검사
         }
     }
-
-
-    internal var locationCallback: LocationCallback = object : LocationCallback() {
-        override fun onLocationResult(locationResult: LocationResult?) {
-            super.onLocationResult(locationResult)
-
-            val locationList = locationResult!!.locations
-
-            if (locationList.size > 0) {//locationResult에서 얻어온 location이 있을 때
-                var location = locationList[locationList.size - 1] // location은 locationList 배열의 마지막! (제일 최근위치(?))
-                //location = locationList.get(0);
-
-                var currentPosition = LatLng(location!!.latitude, location!!.longitude) // 최근위치.
-
-                Log.d(TAG, "onLocationResult : ${location!!.latitude}, ${location!!.longitude}")
-                textView.text = getGeocode(currentPosition)
-            }
-        }
-    }
-
 
     private fun getPermission() {
-
         val hasFineLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
         val hasCoarseLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
 
         if (hasFineLocationPermission == PackageManager.PERMISSION_GRANTED && hasCoarseLocationPermission == PackageManager.PERMISSION_GRANTED) {
+            //퍼미션이 허락되었다면 위치 요청
             requestLocation()
         } else {
 
@@ -98,7 +78,7 @@ class SearchStoreActivity : AppCompatActivity() {
         val hasFineLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
         val hasCoarseLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
         if (hasFineLocationPermission != PackageManager.PERMISSION_GRANTED && hasCoarseLocationPermission != PackageManager.PERMISSION_GRANTED) {
-            return
+            getPermission()
         }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -108,7 +88,6 @@ class SearchStoreActivity : AppCompatActivity() {
                         Log.e(TAG, "location get fail")
                     } else {
                         Log.d(TAG, "${location.latitude},${location.longitude}")
-                        position = LatLng(location.latitude, location.longitude)
                     }
                 }
                 .addOnFailureListener {
@@ -123,8 +102,23 @@ class SearchStoreActivity : AppCompatActivity() {
         }
 
         fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
+    }
 
+    internal var locationCallback: LocationCallback = object : LocationCallback() {
+        override fun onLocationResult(locationResult: LocationResult?) {
+            super.onLocationResult(locationResult)
 
+            val locationList = locationResult!!.locations
+            if (locationList.size > 0) {
+
+                var location = locationList[locationList.size - 1]
+
+                currentPosition = LatLng(location!!.latitude, location!!.longitude)
+                Log.d(TAG, "onLocationResult : ${location!!.latitude}, ${location!!.longitude}")
+
+                textView.text = getGeocode(currentPosition)
+            }
+        }
     }
 
     private fun getGeocode(position: LatLng): String {
@@ -140,15 +134,12 @@ class SearchStoreActivity : AppCompatActivity() {
                     1
             )
         } catch (ioException: IOException) {
-            Log.v(TAG, "지오코더 서비스 사용 불가")
             return "지오코더 서비스 사용불가"
         } catch (illegalArgumentException: IllegalAccessException) {
-            Toast.makeText(this, "잘못된 GPS 좌표입니다.", Toast.LENGTH_LONG).show()
             return "잘못된 GPS 좌표"
         }
 
         if (addresses == null || addresses.size == 0) {
-            Log.v("LocationMainActivity", "주소 미발견")
             return "주소 미발견"
         } else {
             val address = addresses[0]
