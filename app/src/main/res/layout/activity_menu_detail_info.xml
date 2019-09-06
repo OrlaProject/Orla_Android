@@ -225,7 +225,7 @@
                 android:textColor="#1e2527"
                 android:layout_marginLeft="17dp"
                 android:layout_toRightOf="@+id/view_section_vertical5"
-                android:text="강원 철원군 시바리"/>
+                android:text="강원 철원군 사바리"/>
 
 
         </RelativeLayout>
