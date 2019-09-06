@@ -398,6 +398,7 @@
 
 
             <RelativeLayout
+                android:id="@+id/btn_ac_menu_detail_info_check"
                 android:layout_width="wrap_content"
                 android:layout_height="23dp"
                 android:layout_marginRight="14dp"
