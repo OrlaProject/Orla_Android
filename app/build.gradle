@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
@@ -19,6 +21,16 @@ android {
     }
 }
 
+ext {
+    GOOGLE_SERVICES_MAP = 'com.google.android.gms:play-services-maps:16.0.0'
+    GOOGLE_SERVICES_LOCATION = 'com.google.android.gms:play-services-location:16.0.0'
+
+    PROJECT_DEPENDENCIES = [
+            GOOGLE_SERVICES_MAP,
+            GOOGLE_SERVICES_LOCATION
+    ]
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -26,4 +38,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation PROJECT_DEPENDENCIES
+}
+repositories {
+    mavenCentral()
 }
