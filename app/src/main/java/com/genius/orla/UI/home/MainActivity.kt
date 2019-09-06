@@ -1,8 +1,9 @@
-package com.genius.orla
+package com.genius.orla.UI.home
 
 import androidx.appcompat.app.AppCompatActivity
 
 import android.os.Bundle
+import com.genius.orla.R
 
 class MainActivity : AppCompatActivity() {
 

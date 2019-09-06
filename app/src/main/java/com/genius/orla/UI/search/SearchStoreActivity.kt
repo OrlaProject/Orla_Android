@@ -1,4 +1,4 @@
-package com.genius.orla
+package com.genius.orla.UI.search
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -11,6 +11,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.genius.orla.R
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.activity_search_store.*
