@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey">
+
+    <include
+        android:id="@+id/toolbar_check_order"
+        layout="@layout/toolbar_check_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_check_order"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/regularBlueStyle12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/sky_round_border"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="7dp"
+                    android:text="@string/receipt"
+                    android:textColor="@color/cornflower_blue"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/menu_ready" />
+
+                <!-- 주문 상태 -->
+                <LinearLayout
+                    android:paddingBottom="26dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="190dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_check_order_act_order_complete"
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:lineSpacingExtra="14sp"
+                            android:text="주문완료" />
+                        <ImageView
+                            android:id="@+id/img_check_order_act_order_complete"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="17.5sp"
+                            android:src="@drawable/order_line"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_check_order_act_making"
+                            style="@style/boldBlueStyle14sp"
+                            android:lineSpacingExtra="14sp"
+                            android:text="제조 중" />
+                        <ImageView
+                            android:id="@+id/img_check_order_act_making"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="17.5sp"
+                            android:src="@drawable/ready_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_check_order_act_make_complete"
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:lineSpacingExtra="14sp"
+                            android:text="제조 완료" />
+
+                        <ImageView
+                            android:id="@+id/img_check_order_act_make_complete"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="17.5sp"
+                            android:src="@drawable/order_line"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_check_order_act_finish"
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:lineSpacingExtra="14sp"
+                            android:text="수령 완료" />
+
+                        <ImageView
+                            android:id="@+id/img_check_order_act_finish"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="17.5sp"
+                            android:src="@drawable/order_line"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 내 주문 재료 확인 -->
+
+                <!-- 주문 재료 이력 -->
+                <Button
+                    android:id="@+id/btn_check_order_check_material"
+                    style="@style/mediumBlackStyle14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@drawable/white_round_border"
+                    android:text="내 주문 재료 확인" />
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@drawable/white_round_border">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/mediumBlackStyle14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주문 재료 이력" />
+
+                        <TextView
+                            style="@style/regularPastelBlueStyle12sp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/pastel_blue_round_border"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"
+                            android:text="상세 이력 확인" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:text="품목" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:background="@color/charcoal_grey"
+                            android:layout_marginLeft="51.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_category"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="호박"
+                            style="@style/regularCharcoalGrayStyle14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:text="인증분류" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:background="@color/charcoal_grey"
+                            android:layout_marginLeft="25.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_class"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="무농약 농산물"
+                            style="@style/regularCharcoalGrayStyle14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:text="인증번호" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/charcoal_grey"
+                            android:layout_marginLeft="25.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_number"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="031300001"
+                            style="@style/regularCharcoalGrayStyle14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularCharcoalGrayStyle14sp"
+                            android:text="생산자" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:background="@color/charcoal_grey"
+                            android:layout_marginLeft="38.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_producer"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="호박"
+                            style="@style/regularCharcoalGrayStyle14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 가격 및 매장 -->
+                <LinearLayout
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="11dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_round_border">
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularWhiteGrayStyle14sp"
+                            android:text="주문내역" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:background="@color/white"
+                            android:layout_marginLeft="25.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_order_name"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="단호박 라떼"
+                            style="@style/regularWhiteGrayStyle14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularWhiteGrayStyle14sp"
+                            android:text="총 가격" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/white"
+                            android:layout_marginLeft="34.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_total_price"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="3,800원"
+                            style="@style/regularWhiteGrayStyle14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/regularWhiteGrayStyle14sp"
+                            android:text="수령 매장" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="3dp"
+                            android:background="@color/white"
+                            android:layout_marginLeft="21.5dp"/>
+                        <TextView
+                            android:id="@+id/txt_check_order_act_store"
+                            android:layout_marginLeft="11.5dp"
+                            android:text="서대문 농협점"
+                            style="@style/regularWhiteGrayStyle14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
