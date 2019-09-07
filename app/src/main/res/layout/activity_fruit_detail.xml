@@ -333,11 +333,12 @@
             style="@style/regularLightishBlueStyle14sp"
             android:textSize="16sp"
             android:text="5" />
+
         <TextView
-            android:layout_marginRight="24dp"
             style="@style/regularLightishBlueStyle14sp"
-            android:textSize="16sp"
-            android:text="/1000" />
+            android:layout_marginRight="24dp"
+            android:text="/20"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <View
