@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.genius.orla.Data.MenuListData
 
 import com.genius.orla.R
+import com.genius.orla.UI.menu.adapter.MenuListRecyclcerViewAdapter
 import kotlinx.android.synthetic.main.fragment_menu_list.*
 
 /**
@@ -34,9 +35,9 @@ class MenuListFragment : Fragment() {
         menulist.add(MenuListData("단호박라떼","",3200,"","피로회복, 신진대사 활성화로 활력에 탁월한 친환경 호박 주스"))
         menulist.add(MenuListData("단호박라떼","",3200,"","피로회복, 신진대사 활성화로 활력에 탁월한 친환경 호박 주스"))
 
-        var menuListRecyclcerViewAdapter= MenuListRecyclcerViewAdapter(context!!,menulist)
-        rv_fg_my_page_delivery_list.adapter = menuListRecyclcerViewAdapter
-        rv_fg_my_page_delivery_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        var menuListRecyclcerViewAdapter= MenuListRecyclcerViewAdapter(context!!, menulist)
+        rv_fg_menu_list.adapter = menuListRecyclcerViewAdapter
+        rv_fg_menu_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
     }
 

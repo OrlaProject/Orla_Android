@@ -8,7 +8,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_fg_my_page_delivery_list"
+        android:id="@+id/rv_fg_menu_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

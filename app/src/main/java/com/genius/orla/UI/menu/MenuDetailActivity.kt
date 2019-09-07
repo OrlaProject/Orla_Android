@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.genius.orla.R
+
+
 import kotlinx.android.synthetic.main.activity_menu_detail.*
 import org.jetbrains.anko.startActivity
+
 
 class MenuDetailActivity : AppCompatActivity() {
 
@@ -44,7 +47,7 @@ class MenuDetailActivity : AppCompatActivity() {
                 reverseBtn(relativeLayout,textView)
             }else{
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
         }
     }
@@ -55,51 +58,51 @@ class MenuDetailActivity : AppCompatActivity() {
             rl_ac_menu_detail_temp_ice ->{
                 initTempBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             rl_ac_menu_detail_temp_hot ->{
                 initTempBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             //컵
             rl_ac_menu_detail_cup_mug ->{
                 initCupBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             rl_ac_menu_detail_cup_take_out ->{
                 initCupBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             rl_ac_menu_detail_cup_individual ->{
                 initCupBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             //크기
             rl_ac_menu_detail_size_tall ->{
                 initSizeBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             rl_ac_menu_detail_size_large ->{
                 initSizeBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
             rl_ac_menu_detail_size_medium ->{
                 initSizeBtnFlag()
                 relativeLayout.isSelected = true
-                textView.setTextColor(Color.parseColor("#fff"))
+                textView.setTextColor(Color.parseColor("#ffffff"))
             }
 
         }
@@ -109,8 +112,8 @@ class MenuDetailActivity : AppCompatActivity() {
         rl_ac_menu_detail_temp_ice.isSelected = false
         rl_ac_menu_detail_temp_hot.isSelected = false
 
-        txt_menu_detail_ice.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
-        txt_menu_detail_hot.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
+        txt_menu_detail_ice.setTextColor(Color.parseColor("#a2bfff"))
+        txt_menu_detail_hot.setTextColor(Color.parseColor("#a2bfff"))
     }
 
 
@@ -120,9 +123,9 @@ class MenuDetailActivity : AppCompatActivity() {
         rl_ac_menu_detail_cup_mug.isSelected = false
         rl_ac_menu_detail_cup_take_out.isSelected = false
 
-        txt_menu_detail_cup.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
-        txt_menu_detail_mug.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
-        txt_menu_detail_once.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
+        txt_menu_detail_cup.setTextColor(Color.parseColor("#a2bfff"))
+        txt_menu_detail_mug.setTextColor(Color.parseColor("#a2bfff"))
+        txt_menu_detail_once.setTextColor(Color.parseColor("#a2bfff"))
     }
 
     private fun initSizeBtnFlag() {
@@ -130,9 +133,9 @@ class MenuDetailActivity : AppCompatActivity() {
         rl_ac_menu_detail_size_medium.isSelected = false
         rl_ac_menu_detail_size_tall.isSelected = false
 
-        txt_menu_detail_tall.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
-        txt_menu_detail_medium.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
-        txt_menu_detail_large.setTextColor(Color.parseColor(R.color.pastel_blue.toString()))
+        txt_menu_detail_tall.setTextColor(Color.parseColor("#a2bfff"))
+        txt_menu_detail_medium.setTextColor(Color.parseColor("#a2bfff"))
+        txt_menu_detail_large.setTextColor(Color.parseColor("#a2bfff"))
 
     }
 
@@ -162,6 +165,7 @@ class MenuDetailActivity : AppCompatActivity() {
 
             startActivity<MenuDetailInfoActivity>()
         }
+
     }
 
 
