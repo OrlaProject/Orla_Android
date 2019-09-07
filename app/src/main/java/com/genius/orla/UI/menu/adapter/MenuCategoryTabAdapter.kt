@@ -1,4 +1,4 @@
-package com.genius.orla.UI.menu
+package com.genius.orla.UI.menu.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

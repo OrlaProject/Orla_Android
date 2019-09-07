@@ -7,16 +7,10 @@
     tools:context=".UI.menu.MenuDetailActivity">
 
 
-    <ImageView
-        android:id="@+id/iv_ac_menu_detail_thumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:background="@color/pale_grey"/>
-
-
     <RelativeLayout
         android:id="@+id/toolbar_menu_detail"
         android:layout_width="match_parent"
+        android:elevation="2dp"
         android:layout_height="56dp">
 
         <ImageView
@@ -39,6 +33,23 @@
 
 
     </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_ac_menu_detail_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:background="@color/pale_grey"/>
+
+
+
 
 
 
@@ -68,7 +79,7 @@
                     style="regularCharcoalGrayStyle14sp"
                     android:textSize="18sp"
                     android:textColor="#1e2527"
-                    tools:text="단호박 라떼"/>
+                    android:text="단호박 라떼"/>
 
                 <TextView
                     android:layout_width="224dp"
@@ -404,7 +415,7 @@
                 android:textSize="14sp"
                 android:textColor="#1e2527"
                 android:fontFamily="@font/noto_sans_cjkkr_regular"
-                tools:text="주문 재료 이력"/>
+                android:text="주문 재료 이력"/>
 
 
             <RelativeLayout
@@ -614,4 +625,10 @@
 
 
     </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 </RelativeLayout>
