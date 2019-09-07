@@ -11,9 +11,7 @@
         android:layout_height="66dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="18dp"
-        android:cropToPadding="false"
-        android:background="#d8d8d8">
-
+>
     </de.hdodenhof.circleimageview.CircleImageView>
 
 
