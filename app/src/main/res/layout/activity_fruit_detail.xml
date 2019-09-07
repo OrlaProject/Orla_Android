@@ -11,8 +11,9 @@
     <ImageView
         android:id="@+id/img_fruit_act_thumb"
         android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:background="@color/pale_grey"/>
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fruits"/>
 
 <!-- 툴바 -->
     <RelativeLayout

@@ -1,8 +1,10 @@
 package com.genius.orla.UI.fruit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.genius.orla.R
+import com.genius.orla.UI.order.CheckOrderActivity
 import kotlinx.android.synthetic.main.activity_check_order.*
 import kotlinx.android.synthetic.main.activity_fruit_detail.*
 import org.jetbrains.anko.toast
@@ -93,6 +95,12 @@ class FruitDetailActivity : AppCompatActivity() {
 
                 txt_fruit_act_maximum.text = (appleCount + grapeCount + tomatoCount).toString()
             }
+        }
+
+        rl_tab_menu_category_salad.setOnClickListener {
+            val intent : Intent = Intent(applicationContext,CheckOrderActivity::class.java)
+            intent.putExtra("status",3)
+            startActivity(intent)
         }
     }
 }

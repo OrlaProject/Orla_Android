@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#e0e0e0</color>
-    <color name="colorPrimaryDark">#e0e0e0</color>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#ebf1ff</color>
     <color name="colorAccent">#3468ff</color>
 
     <color name="cornflower_blue">#4276e7</color>

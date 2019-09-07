@@ -34,7 +34,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/sky_round_border"
                     android:paddingHorizontal="20dp"
-                    android:paddingVertical="7dp"
+
                     android:text="@string/receipt"
                     android:textColor="@color/cornflower_blue"
                     android:textSize="12sp" />
@@ -46,12 +46,19 @@
                     android:layout_marginTop="10dp"
                     android:src="@drawable/menu_ready" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="37dp"
+                    android:src="@drawable/ready"/>
+
                 <!-- 주문 상태 -->
                 <LinearLayout
                     android:paddingBottom="26dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="190dp"
+                    android:layout_marginTop="38dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -62,16 +69,16 @@
 
                         <TextView
                             android:id="@+id/txt_check_order_act_order_complete"
-                            style="@style/regularCharcoalGrayStyle14sp"
+                            style="@style/regularBlueStyle14sp"
                             android:lineSpacingExtra="14sp"
                             android:text="주문완료" />
                         <ImageView
                             android:id="@+id/img_check_order_act_order_complete"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="17.5sp"
-                            android:background="@drawable/selector_dot_blue"/>
+                            android:background="@drawable/ready_icon"/>
 
                     </LinearLayout>
 
@@ -83,16 +90,15 @@
 
                         <TextView
                             android:id="@+id/txt_check_order_act_making"
-                            style="@style/boldBlueStyle14sp"
-                            android:lineSpacingExtra="14sp"
+                            style="@style/regularCharcoalGrayStyle14sp"
                             android:text="제조 중" />
                         <ImageView
                             android:id="@+id/img_check_order_act_making"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="17.5sp"
-                            android:background="@drawable/selector_dot_blue" />
+                            android:background="@drawable/ready_icon" />
 
                     </LinearLayout>
 
@@ -110,11 +116,11 @@
 
                         <ImageView
                             android:id="@+id/img_check_order_act_make_complete"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="17.5sp"
-                            android:background="@drawable/selector_dot_blue"/>
+                            android:background="@drawable/ready_icon"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -131,11 +137,11 @@
 
                         <ImageView
                             android:id="@+id/img_check_order_act_finish"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="17.5sp"
-                            android:background="@drawable/selector_dot_blue" />
+                            android:background="@drawable/ready_icon" />
 
                     </LinearLayout>
 
@@ -177,11 +183,11 @@
                             android:text="주문 재료 이력" />
 
                         <TextView
+                            android:id="@+id/btn_ac_check_order_detail"
                             style="@style/regularPastelBlueStyle12sp"
                             android:layout_alignParentRight="true"
                             android:background="@drawable/pastel_blue_round_border"
                             android:paddingHorizontal="8dp"
-                            android:paddingVertical="2dp"
                             android:gravity="center_vertical"
                             android:text="상세 이력 확인" />
                     </RelativeLayout>

@@ -13,7 +13,9 @@
         <activity android:name=".UI.order.OrderMaterialActivity" />
         <activity android:name=".UI.order.CheckOrderActivity"></activity>
         <activity android:name=".UI.menu.MenuActivity" />
+        <activity android:name=".UI.menu.MenuDetailActivity"></activity>
         <activity android:name=".UI.store.SearchStoreActivity"></activity>
+        <activity android:name=".UI.menu.MenuDetailInfoActivity"></activity>
         <activity android:name=".UI.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

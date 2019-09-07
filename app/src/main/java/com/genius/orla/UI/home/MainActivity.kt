@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setMainSlider() {
-        vp_main_act_slider.adapter = MainSliderAdapter(supportFragmentManager, 3)
+        vp_main_act_slider.adapter = MainSliderAdapter(supportFragmentManager, 5)
         vp_main_act_slider.offscreenPageLimit = 2
     }
 

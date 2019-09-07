@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.genius.orla.R
+import com.genius.orla.UI.order.CheckOrderActivity
 
 
 import kotlinx.android.synthetic.main.activity_menu_detail.*
@@ -165,6 +166,12 @@ class MenuDetailActivity : AppCompatActivity() {
 
             startActivity<MenuDetailInfoActivity>()
         }
+
+        rl_tab_menu_category_salad.setOnClickListener {
+            startActivity<CheckOrderActivity>()
+        }
+
+
 
     }
 

@@ -23,17 +23,19 @@
 
             <ImageView
                 android:id="@+id/img_order_material_receipt"
-                android:layout_width="match_parent"
-                android:layout_height="459dp"
+                android:layout_width="400dp"
+                android:layout_height="500dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
                 android:layout_below="@+id/txt_order_material_ment"
-                android:layout_marginHorizontal="14dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/white" />
+                android:src="@drawable/pumpkin"/>
 
             <TextView
                 android:id="@+id/txt_order_material_ment"
-                style="@style/mediumCharcoalGrayStyle14sp"
+                style="@style/regularLightishBlueStyle14sp"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/noto_sans_cjkkr_medium"
                 android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
                 android:lineSpacingExtra="8sp"

@@ -46,13 +46,8 @@
         android:id="@+id/iv_ac_menu_detail_thumbnail"
         android:layout_width="match_parent"
         android:layout_height="189dp"
-        android:background="@color/pale_grey"/>
-
-
-
-
-
-
+        android:scaleType="centerCrop"
+        android:src="@drawable/pumpkin"/>
 
     <LinearLayout
         android:id="@+id/ll_ac_menu_detail_info"

@@ -17,12 +17,20 @@ class MainSliderAdapter(fm: FragmentManager?, val num_fragment : Int) : Fragment
                 bundle.putInt("num", 1)
             }
             1-> {
-                bundle.putInt("background_url", R.drawable.banner)
+                bundle.putInt("background_url", R.drawable.banner_2)
                 bundle.putInt("num", 2)
             }
             2-> {
-                bundle.putInt("background_url", R.drawable.banner)
+                bundle.putInt("background_url", R.drawable.banner_3)
                 bundle.putInt("num", 3)
+            }
+            3-> {
+                bundle.putInt("background_url", R.drawable.banner_4)
+                bundle.putInt("num", 4)
+            }
+            4-> {
+                bundle.putInt("background_url", R.drawable.banner_5)
+                bundle.putInt("num", 5)
             }
         }
         fragment.arguments = bundle

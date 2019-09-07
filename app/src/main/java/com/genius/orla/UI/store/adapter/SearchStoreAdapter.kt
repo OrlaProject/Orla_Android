@@ -6,11 +6,17 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.genius.orla.UI.store.fragment.SearchStoreFragment
 
 
-class SearchStoreAdapter(fm : FragmentManager, val fragmentCount : Int) : FragmentStatePagerAdapter(fm) {
+class SearchStoreAdapter(fm: FragmentManager, val fragmentCount: Int) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment? {
-        when(position){
-            0 -> return SearchStoreFragment()
-            1 -> return SearchStoreFragment()
+        when (position) {
+            0 -> {
+                val nearStoreFragment: SearchStoreFragment = SearchStoreFragment.newInstance(0)
+                return nearStoreFragment
+            }
+            1 -> {
+                val starStoreFragment: SearchStoreFragment = SearchStoreFragment.newInstance(1)
+                return starStoreFragment
+            }
             else -> return null
         }
     }
