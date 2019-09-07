@@ -7,16 +7,10 @@
     tools:context=".UI.menu.MenuDetailActivity">
 
 
-    <ImageView
-        android:id="@+id/iv_ac_menu_detail_thumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:background="@color/pale_grey"/>
-
-
     <RelativeLayout
         android:id="@+id/toolbar_menu_detail"
         android:layout_width="match_parent"
+        android:elevation="2dp"
         android:layout_height="56dp">
 
         <ImageView
@@ -39,6 +33,23 @@
 
 
     </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_ac_menu_detail_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:background="@color/pale_grey"/>
+
+
+
 
 
 
@@ -68,7 +79,7 @@
                     style="regularCharcoalGrayStyle14sp"
                     android:textSize="18sp"
                     android:textColor="#1e2527"
-                    tools:text="단호박 라떼"/>
+                    android:text="단호박 라떼"/>
 
                 <TextView
                     android:layout_width="224dp"
@@ -99,6 +110,7 @@
             android:layout_marginTop="12dp">
 
             <TextView
+                android:id="@+id/txt_price_menu_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -122,6 +134,7 @@
 
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_act_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -165,13 +178,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_marginLeft="72dp"
-                android:background="@drawable/round_fill_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_ice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/pastel_blue"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="14dp"
                     android:text="아이스"/>
@@ -185,9 +199,10 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="14dp"
                 android:layout_toRightOf="@+id/rl_ac_menu_detail_temp_ice"
-                android:background="@drawable/round_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_hot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -223,13 +238,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_marginLeft="72dp"
-                android:background="@drawable/round_fill_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_mug"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/pastel_blue"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="14dp"
                     android:text="머그컵"/>
@@ -243,9 +259,10 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="14dp"
                 android:layout_toRightOf="@+id/rl_ac_menu_detail_cup_mug"
-                android:background="@drawable/round_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_cup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -263,9 +280,10 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="14dp"
                 android:layout_toRightOf="@+id/rl_ac_menu_detail_cup_individual"
-                android:background="@drawable/round_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_once"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -303,13 +321,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_marginLeft="72dp"
-                android:background="@drawable/round_fill_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_tall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/pastel_blue"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="14dp"
                     android:text="톨"/>
@@ -323,9 +342,10 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="14dp"
                 android:layout_toRightOf="@+id/rl_ac_menu_detail_size_tall"
-                android:background="@drawable/round_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -343,9 +363,10 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="14dp"
                 android:layout_toRightOf="@+id/rl_ac_menu_detail_size_medium"
-                android:background="@drawable/round_blue_stroke">
+                android:background="@drawable/selector_filter">
 
                 <TextView
+                    android:id="@+id/txt_menu_detail_large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -394,7 +415,7 @@
                 android:textSize="14sp"
                 android:textColor="#1e2527"
                 android:fontFamily="@font/noto_sans_cjkkr_regular"
-                tools:text="주문 재료 이력"/>
+                android:text="주문 재료 이력"/>
 
 
             <RelativeLayout
@@ -604,4 +625,10 @@
 
 
     </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 </RelativeLayout>
