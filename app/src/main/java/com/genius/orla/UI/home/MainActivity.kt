@@ -8,8 +8,8 @@ import android.os.Handler
 import android.view.View
 import com.genius.orla.R
 import com.genius.orla.UI.home.adapter.MainSliderAdapter
-import com.genius.orla.UI.menu.MenuActivity
 import com.genius.orla.UI.menu.MenuDetailInfoActivity
+import com.genius.orla.UI.store.SearchStoreActivity
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar_main.*
@@ -46,14 +46,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOnBtnClickListener() {
         btn_main_act_orla_order.setOnClickListener {
-            startActivity<MenuActivity>()
+            startActivity<SearchStoreActivity>()
         }
 
         img_main_act_qr.setOnClickListener {
             //QR코드 액티비티로 넘어가기
 
             initScan()
-
 
         }
     }
@@ -62,7 +61,6 @@ class MainActivity : AppCompatActivity() {
     private fun initScan(){
         IntentIntegrator(this).initiateScan()
     }
-
 
 
     private fun setMainSlider() {
@@ -81,8 +79,6 @@ class MainActivity : AppCompatActivity() {
             if (result.contents == null){
 
                 toast("데이터가 없습니다.")
-
-
 
             }else{
 

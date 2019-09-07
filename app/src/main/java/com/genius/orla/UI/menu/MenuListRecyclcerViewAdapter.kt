@@ -28,10 +28,6 @@ class MenuListRecyclcerViewAdapter (val ctx: Context, val menulist : ArrayList<M
         holer.content.text = menulist[position].content
         holer.price.text = menulist[position].price.toString()
 
-
-
-
-
     }
 
 

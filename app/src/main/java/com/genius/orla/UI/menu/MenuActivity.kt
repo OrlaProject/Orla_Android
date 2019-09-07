@@ -17,7 +17,6 @@ class MenuActivity : AppCompatActivity() {
 
         configureTopTab()
 
-
     }
 
 
