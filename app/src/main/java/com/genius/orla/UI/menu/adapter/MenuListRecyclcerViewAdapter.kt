@@ -6,15 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.genius.orla.Data.MenuListData
 import com.genius.orla.R
+import de.hdodenhof.circleimageview.CircleImageView
 
 
-class MenuListRecyclcerViewAdapter (val ctx: Context, val menulist : ArrayList<MenuListData>) : RecyclerView.Adapter<MenuListRecyclcerViewAdapter.Holder>(){
+class MenuListRecyclcerViewAdapter(val ctx: Context, val menulist: ArrayList<MenuListData>) : RecyclerView.Adapter<MenuListRecyclcerViewAdapter.Holder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_menu_list, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_menu_list, parent, false)
         return Holder(view)
     }
 
@@ -27,19 +29,20 @@ class MenuListRecyclcerViewAdapter (val ctx: Context, val menulist : ArrayList<M
         holer.content.text = menulist[position].content
         holer.price.text = menulist[position].price.toString()
 
+        Glide.with(ctx).load(menulist[position].thumbnail).into(holer.thumb)
+
     }
 
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val title : TextView = itemView.findViewById(R.id.tv_rv_menu_list_title) as TextView
-        val content : TextView = itemView.findViewById(R.id.tv_rv_menu_list_content) as TextView
-        val price : TextView = itemView.findViewById(R.id.tv_rv_menu_list_price) as TextView
-
+        val title: TextView = itemView.findViewById(R.id.tv_rv_menu_list_title) as TextView
+        val content: TextView = itemView.findViewById(R.id.tv_rv_menu_list_content) as TextView
+        val price: TextView = itemView.findViewById(R.id.tv_rv_menu_list_price) as TextView
+        val thumb: CircleImageView = itemView.findViewById(R.id.iv_rv_menu_list_thumbnail) as CircleImageView
 
 
     }
-
 
 
 }
